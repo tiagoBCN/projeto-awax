@@ -1,0 +1,807 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat';
+    font-size: 13px;
+    overflow-x: hidden;
+}
+header{
+    height: 100px;
+    background-color: black;
+    color: white;
+}
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    width: 100px;
+}
+.logoimg{
+    width: 80px;
+    height: 80px;
+    background-color: #b28756;
+    border-radius: 40px;
+}
+.menuopen{
+    display: none;
+}
+.menu{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.menu ul,
+.menu li{
+    list-style: none;
+}
+.menu ul{
+    display: flex;
+}
+.menu li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left:10px;
+    padding-right: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid black;
+}
+.menu li a:hover{
+    border-bottom: 5px solid #b28756;
+}
+.menu .active a{
+    border-bottom: 5px solid #b28756;
+}
+
+.banner{
+    height: calc(100vh - 100px);
+    background-color: #333;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.banner .sliders{
+    width: 1000vw;
+    height: 100%;
+
+}
+.banner .slide{
+    width: 100vw;
+    height: 100%;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.8);
+}
+.banner .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+.banner h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+}
+.banner h1 span{
+    color: #b28756;
+}
+.banner h2{
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+.button{
+    display: inline-block;
+    background-color: #b28756;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+.banner .slidepoint{
+    width: 100vw;
+    height: 20px;
+    position: absolute;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .point{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.banner .active{
+    background-color: #b28756;
+}
+.default{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.default .sectiontitle,
+.default .sectiondes{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.default .sectiontitle{
+    font-size: 20px;
+}
+.default .sectiondes{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom:40px;
+     color: #ccc;
+}
+.default .sectionbody{
+    max-width: 1140px;
+    margin: auto;
+   
+}
+.default.light{
+    background-color: #f7f7f7;
+}
+.default.dark{
+    background-color: black;
+}
+.default.light .sectiontitle,
+.default.light .sectionbody{
+    color: black;
+}
+.default.dark .sectiontitle,
+.default.dark .sectionbody{
+    color: white;
+}
+
+
+
+
+
+
+
+
+/*
+Css de areas especificas
+*/
+.sectionabout{
+    display: flex;
+}
+.sectionaboutleft{
+    flex: 1;
+}
+.sectionaboutleft p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.sectionaboutright{
+    width: 520px;
+    text-align: center;
+}
+.sectionaboutright img{
+    width: 460px;
+    box-shadow: 0px 5px 10px #333;
+}
+
+
+
+.sectionservices{
+    display: flex;
+}
+.sectionservice{
+    flex: 1;
+    text-align: center;
+    border-right: 1px solid #333;
+    padding: 15px;
+}
+.sectionservice:first-child {
+    border-left: 1px solid #333;
+}
+.sectionservice h4{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    
+}
+.sectionservice p{
+    margin-top: 10px;
+    font-size:13px;
+    color: #999;
+}
+
+
+
+
+
+.sectionproject{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sectionprojectfilters{
+    border: 1px solid #333;
+    background-color: #eee;
+    border-radius:30px ;
+    display: inline-block;
+    padding:0px 20px;
+
+}
+.sectionprojectfilters ul,
+.sectionprojectfilters li{
+    list-style: none;
+}
+.sectionprojectfilters li{
+    display: inline-block;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #ccc;
+    color: #555;
+    border-bottom: 3px solid #eee;
+    cursor: pointer;
+}
+.sectionprojectfilters li:first-child{
+    border-left: 0;
+}
+.sectionprojectfilters li:hover,
+.sectionprojectfilters .active{
+    border-bottom: 3px solid #b28756;
+}
+
+.sectionprojectphotos{
+    width: 100vw;
+    max-width: 1140px;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.sectionprojectphoto{
+    width: 280px;
+
+}
+
+.sectionprojectphotoarea{
+    margin: 10px;
+    width: 260px;
+    height: 160px;
+}
+.sectionprojectphotoarea img{
+    width: inherit;
+    height: inherit;
+}
+.sectionprojectphotoinfo{
+    position:absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: inherit;
+    height: inherit;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+}
+.sectionprojectphotoinfo h5{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+.sectionprojectphotoarea:hover .sectionprojectphotoinfo{
+    display: flex;
+}
+.bg{
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+.sectionteamarea{
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.sectionteam{
+    overflow: hidden;
+    max-width: 880px;
+    margin: auto;
+}
+.sectionteam .sliders{
+    width: 1000vw;
+    height: 100%;
+
+}
+.sectionteam .slide{
+    width: 280px;
+    height: 100%;
+    min-height: 330px;
+    display: inline-block;
+    background-color: white;
+    margin-right: 20px;
+}
+.sectionteam .slidearea{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    color: black;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.sectionteamarea .slidepoint{
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionteamarea .point{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.sectionteamarea .active{
+    background-color: #b28756;
+}
+.sectionteamavatar{
+    width: 150px;
+    height: auto;
+
+}
+.sectionteamname{
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 30px;
+}
+.sectionteamrole{
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+.sectionteamsocial{
+    display: flex;
+    margin-top: 20px;
+}
+
+.sectionteamsocial a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 13px;
+    margin-right: 10px;
+}
+.sectionteamsocial a:hover{
+    background-color: #b28756;
+}
+.sectionclient{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+
+}
+.sectionclient .sectiontitle{
+    margin-top: 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.sectionclient .sectionclientdes{
+    color: black;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.sectionclient .slidepoint{
+    margin-top: 30px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sectionclient .sectionbody{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.sectionclient p{
+    margin-top: 10px;
+}
+.sectionclient .point{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.sectionclient .point:hover,
+.sectionclient .active{
+    background-color: #b28756;
+}
+
+.sectionpatro{
+    background-color: white;
+}
+.sectionlogo{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+.sectionlogo img{
+    margin-right: 70px;
+}
+
+
+.sectionpreco{
+    background-color: #eee;
+    padding: 15px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.sectionpreco .sectiontitle{
+    margin-top: 10px;
+}
+.area{
+    background-color: white;
+    display: inline-block;
+    margin-right: 15px;
+}
+.precoarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 250px;
+}
+.precoarea h4{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.precoarea .precop{
+    font-weight: bold;
+    font-size: 25px;
+}
+.precoarea .desc{
+    font-size: 12px;
+    margin-top: 10px;
+    color: #ccc;
+}
+.precoarea p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.black{
+    display: inline-block;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    border-radius: 20px;
+}
+
+
+
+
+.sectionfeature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #999;
+}
+.sectionfeature img{
+    margin-bottom: 30px;
+}
+.sectionfeaturedes{
+    display: flex;
+}
+.featuredescimg{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.featuredesc h3{
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.featuredesc p{
+    color: #999;
+    margin-top: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.featuredesc{
+    margin-bottom: 10px;
+}
+.sectionfeatures .point{
+    width: 15px;
+    height: 15px;
+    border: 2px solid #b28756;
+    border-radius: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sectionfeatures .slidepoint{
+    display: flex;
+}
+.sectionfeatures .point:hover,
+.sectionfeatures .active{
+    background-color: #b28756;
+}
+.sectionfeatures{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.sectionmap{
+    background-image: url('../images/mapa.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.sectionmaparea{
+    width: 100vw;
+    max-width: 1140px;
+    margin: auto;
+}
+.sectionmapinfo{
+    width: 50%;
+    padding: 30px;
+    background-color: white;
+    color: black;
+}
+.sectionmapitem{
+    display: flex;
+    align-items: center;
+    color: #999;
+    margin-bottom: 10px;
+}
+.sectionmapitemimg{
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #999;
+    border-radius: 15px;
+    margin-right: 15px;
+}
+.sectionmapitemimg img{
+    width: 15px;
+    height: auto;
+}
+
+
+
+
+
+@media (max-width:450px) {
+    .menuopen{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    .logo{
+        margin-left: 30px;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 80%;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 60px;
+        font-size: 20px;
+        margin-left: 30px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #b28756;
+    }
+
+    .banner h1{
+        font-size: 30px;
+    }
+    .banner h2{
+        font-size: 17px;
+    }
+
+    .sectionabout{
+        flex-direction: column;
+    }
+    .sectionaboutleft{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .sectionaboutright{
+        width: auto;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .sectionaboutright img{
+        width: 100%;
+    }
+    .sectionservices{
+        flex-wrap: wrap;
+    }
+    .sectionservice{
+        min-width: 100%;
+        margin-bottom: 30px;
+    }
+    .sectionservice:first-child{
+        border-left: 0;
+    }
+    
+
+    .sectionprojectfilters{
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .secrionprojectphoto{
+        width: 320px;
+    }
+    .sectionprojectphotoarea{
+        width: 300px;
+        height: 190px;
+    }
+    .sectionteam{
+        max-width: 280px;
+    }
+    .sectionmapinfo{
+        width: auto;
+    }
+    .sectionmap{
+        padding: 0;
+        padding-bottom:250px;
+    }
+    .sectionmaparea{
+        width: auto;
+    }
+    .sectionmapitem{
+        margin-bottom: 20px;
+    }
+    .sectionmapitem:last-child{
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:450px) and (max-width:880px) {
+    .menuopen{
+        display: block;
+        width: 45px;
+        margin-right: 30px;
+    }
+    .logo{
+        margin-left: 30px;
+    }
+    nav{
+        display: none;
+        position: absolute;
+        z-index: 99;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 70%;
+        height: calc(100vh - 100px);
+        top: 100px;
+        right: 0;
+    }
+    .menu ul{
+        flex-direction: column;
+    }
+    .menu li a{
+        font-weight: bold;
+        height: 80px;
+        font-size: 27px;
+        margin-left: 50px;
+        border: 0;
+    }
+    .menu li.active a{
+        border: 0;
+        color: #b28756;
+    }
+
+
+
+    .sectionabout{
+        flex-direction: column;
+    }
+    .sectionaboutleft{
+        margin-left: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    .sectionaboutright{
+        width: auto;
+    }
+    .sectionservices{
+        flex-wrap: wrap;
+    }
+    .sectionservice{
+        min-width: 50%;
+        margin-bottom: 30px;
+    }
+    .sectionservice:first-child{
+        border-left: 0;
+    }
+    .sectionteam{
+        max-width: 580px;
+    }
+    .sectionmapinfo{
+        width: auto;
+    }
+    .sectionmap{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .sectionmaparea{
+        width: auto;
+    }
+    .sectionmapitem{
+        margin-bottom: 20px;
+    }
+    .sectionmapitem:last-child{
+        margin-bottom: 0;
+    }
+}
